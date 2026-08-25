@@ -1,3 +1,20 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true
+  "java.debug.settings.onBuildFailureProceed": true,
+  "java.configuration.updateBuildConfiguration": "interactive",
+  // Set the default terminal profile to PowerShell with UTF-8 encoding
+  "terminal.integrated.defaultProfile.windows": "PowerShell UTF8",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.linux": "bash",
+
+  "terminal.integrated.profiles.windows": {
+    "PowerShell UTF8": {
+      "source": "PowerShell",
+      "args": [
+        "-NoExit",
+        "-Command",
+        //Use UTF-8 encoding for input and output in the terminal (allows symbols like emojis to display correctly)
+        "chcp 65001 > $null; [Console]::InputEncoding = [System.Text.UTF8Encoding]::new($false); [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new($false)"
+      ]
+    }
+  }
 }
