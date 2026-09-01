@@ -1,20 +1,17 @@
 package todo_list_solution;
 
+import java.util.ArrayList;
+
 public class TodoList {
 	
-	private Todo[] todos;
-	private int index;
+	private ArrayList<Todo> todos;
 	
 	public TodoList() {
-		todos = new Todo[100];
-		index = 0;
-    }
+		todos = new ArrayList<>();
+	}
 	
 	public void addTodo(String description) {
-		if (index < todos.length) {
-			todos[index] = new Todo(description);
-			index++;
-		}
+		todos.add(new Todo(description));
 	}
 	
 	/**
@@ -23,8 +20,8 @@ public class TodoList {
 	 */
 	public void toggleComplete(int index) {
 		index -= 1;
-		if (index >= 0 && index < this.index) {			
-			todos[index].toggleComplete();
+		if (index >= 0 && index < todos.size()) {			
+			todos.get(index).toggleComplete();
 		}
 	}
 	
@@ -35,12 +32,12 @@ public class TodoList {
 	 */
 	public String todoProgress() {
 		double count = 0;
-		for (int i = 0; i < todos.length; i++) {
-			if (todos[i] != null && todos[i].isComplete()) {
+		for (Todo todo : todos) {
+			if (todo.isComplete()) {
 				count++;
 			}
 		}
-		return String.format("%.0f%%\n", count / index * 100);
+		return String.format("%.0f%%\n", count / todos.size() * 100);
 	}
 	
 	/**
@@ -49,17 +46,16 @@ public class TodoList {
 	 */
 	public String toString() {
 		String result = "Todo List:\n";
-		for (int i = 0; i < todos.length; i++) {
-			if (todos[i] != null) {
-				if (todos[i].isComplete()) {
-					result += "\u2714"; //Check mark symbol
-				}
-				else {
-					result += "\u25EF"; //Circle symbol
-				}
-				result += " " + (i+1) + ":\t" + todos[i].getDescription() + "\n";
-				result += "Progress: " + todoProgress();
+		for (int i = 0; i < todos.size(); i++) {
+			Todo todo = todos.get(i);
+			if (todo.isComplete()) {
+				result += "\u2714"; //Check mark symbol
 			}
+			else {
+				result += "\u25EF"; //Circle symbol
+			}
+			result += " " + (i+1) + ":\t" + todo.getDescription() + "\n";
+			result += "Progress: " + todoProgress();
 		}
 		return result;
 	}

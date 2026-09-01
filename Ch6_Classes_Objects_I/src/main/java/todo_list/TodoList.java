@@ -1,12 +1,14 @@
 package todo_list;
 
+import java.util.ArrayList;
+
 public class TodoList {
 
-	private Todo[] todos;
+	private ArrayList<Todo> todos;
 	private int index;
 
 	public TodoList() {
-		todos = new Todo[100];
+		todos = new ArrayList<Todo>();
 		index = 0;
 	}
 
