@@ -55,9 +55,11 @@ $dependenciesBlock = Get-XmlBlock $rootPomText "dependencies"
 $buildBlock = Get-XmlBlock $rootPomText "build"
 
 $modulePomText = Get-Content $modulePomPath -Raw
-$artifactIdMatch = [regex]::Match($modulePomText, "<artifactId>(.*?)</artifactId>")
+# Strip the <parent> block first so we don't accidentally match its <artifactId>
+$modulePomTextNoParent = [regex]::Replace($modulePomText, "<parent>.*?</parent>", "", [System.Text.RegularExpressions.RegexOptions]::Singleline)
+$artifactIdMatch = [regex]::Match($modulePomTextNoParent, "<artifactId>(.*?)</artifactId>")
 if (-not $artifactIdMatch.Success) {
-    throw "Could not find <artifactId> in $modulePomPath"
+    throw "Could not find the module's own <artifactId> in $modulePomPath"
 }
 $artifactId = $artifactIdMatch.Groups[1].Value
 
@@ -67,9 +69,11 @@ $stagingModule = Join-Path $stagingRoot $ModuleName
 New-Item -ItemType Directory -Path $stagingModule -Force | Out-Null
 
 robocopy $modulePath $stagingModule /E /XD target .git .vscode /NFL /NDL /NJH /NJS | Out-Null
+# robocopy uses bit-flag exit codes where 0-7 mean success; only >=8 is a real failure
 if ($LASTEXITCODE -ge 8) {
     throw "robocopy failed while copying '$modulePath' (exit code $LASTEXITCODE)"
 }
+$LASTEXITCODE = 0
 
 $standalonePom = @"
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -100,3 +104,4 @@ Compress-Archive -Path $stagingModule -DestinationPath $zipPath
 Remove-Item $stagingRoot -Recurse -Force
 
 Write-Host "Packaged '$ModuleName' -> $zipPath"
+exit 0
