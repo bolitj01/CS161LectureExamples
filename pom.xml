@@ -8,6 +8,7 @@
     <modules>
         <module>CS160Review</module>
         <module>Ch6_Classes_Objects_I</module>
+        <module>Ch8_Classes_Objects_II</module>
     </modules>
 
     <properties>

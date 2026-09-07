@@ -10,5 +10,5 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>Ch6_Classes_Objects_I</artifactId>
+    <artifactId>Ch8_Classes_Objects_II</artifactId>
 </project>
