@@ -7,6 +7,9 @@ public final class User {
     private final String email;
     //LocalDateTime class itself is immutable, so we can safely use it as a field in our immutable class
     private final LocalDateTime birthDate;
+
+    enum Day { SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY }
+
     // Constructor to initialize all fields
     public User(String username, String email, LocalDateTime birthDate) {
         this.username = username;
@@ -45,5 +48,9 @@ public final class User {
         LocalDateTime newDate = user.getBirthDate().plusDays(1); // This creates a new LocalDateTime object, but does not modify the original birthDate
         System.out.println("Modified date of birth: " + newDate);
         System.out.println("Original date of birth: " + user.getBirthDate());
+
+        Day WorkDay = Day.TUESDAY;
+
+        System.out.println("User " + user.getUsername() + "'s next work day: " + WorkDay);
     }
 }
