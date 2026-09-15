@@ -14,6 +14,10 @@ public class Instructor {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public String getOfficeNumber() {
         return officeNumber;
     }

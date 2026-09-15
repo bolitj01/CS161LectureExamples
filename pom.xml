@@ -9,6 +9,7 @@
         <module>CS160Review</module>
         <module>Ch6_Classes_Objects_I</module>
         <module>Ch8_Classes_Objects_II</module>
+        <module>Ch12_13_20_Intro_JavaFX</module>
     </modules>
 
     <properties>

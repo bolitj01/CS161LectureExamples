@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="498.0" prefWidth="692.0" spacing="15.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ImageView.ImageViewDemoController">
+   <children>
+    <ImageView fx:id="myImage" fitHeight="400" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../Dog.jpg" />
+      </image>
+    </ImageView>
+      <HBox fx:id="animalBox" alignment="CENTER" spacing="80.0">
+         <children>
+          <RadioButton fx:id="dogRadioButton" mnemonicParsing="false" onAction="#showDog" selected="true" text="Dog">
+            <toggleGroup>
+              <ToggleGroup fx:id="myToggleGroup" />
+            </toggleGroup>
+               <font>
+                  <Font size="36.0" />
+               </font>
+          </RadioButton>
+          <RadioButton fx:id="catRadioButton" mnemonicParsing="false" text="Cat" toggleGroup="$myToggleGroup">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+</VBox>

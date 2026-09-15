@@ -1,4 +1,6 @@
-public class Stock() {
+package basics;
+
+public class Stock {
     private String symbol;
     private double price;
 
@@ -7,9 +9,9 @@ public class Stock() {
         this.price = price;
     }
 
-    public Stock(Stock object 2) {
-        symbol = object2.symbol;
-        price = object2.price;
+    public Stock(Stock otherStock) {
+        symbol = otherStock.symbol;
+        price = otherStock.price;
     }
 
     public String toString() {

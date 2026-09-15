@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="214.0" prefWidth="615.0" spacing="20.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CheckBox.CheckBoxEventController">
+   <children>
+    <CheckBox fx:id="myCheckBox" mnemonicParsing="false" onAction="#myCheckBoxListener" selected="false" text="Read the Terms of Agreement" textFill="#3477e4">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </CheckBox>
+    <Label fx:id="outputLabel" prefHeight="70.0" prefWidth="403.0" text="_">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>
