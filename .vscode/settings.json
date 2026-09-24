@@ -1,6 +1,6 @@
 {
   "java.debug.settings.onBuildFailureProceed": true,
-  "java.configuration.updateBuildConfiguration": "interactive",
+  "java.configuration.updateBuildConfiguration": "automatic",
   // Set the default terminal profile to PowerShell with UTF-8 encoding
   "terminal.integrated.defaultProfile.windows": "PowerShell UTF8",
   "terminal.integrated.defaultProfile.osx": "zsh",
