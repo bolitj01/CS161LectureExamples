@@ -149,6 +149,14 @@ public class MemoryGameController {
         firstChoice = null;
         secondChoice = null;
         nextTurnBtn.setVisible(false);
+        //Border around the current player
+        if (currentPlayer == 0) {
+            p2ScoreLbl.getStyleClass().remove("player-turn");
+            p1ScoreLbl.getStyleClass().add("player-turn");
+        } else {
+            p1ScoreLbl.getStyleClass().remove("player-turn");
+            p2ScoreLbl.getStyleClass().add("player-turn");
+        }
     }
 
     // TODO: Method that checks for game over and

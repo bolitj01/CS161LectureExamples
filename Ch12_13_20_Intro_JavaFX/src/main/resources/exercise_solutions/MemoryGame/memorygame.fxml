@@ -29,7 +29,7 @@
    <top>
       <HBox alignment="CENTER" prefHeight="30.0" prefWidth="600.0" spacing="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Label fx:id="p1ScoreLbl" text="Player 1 Score:">
+            <Label fx:id="p1ScoreLbl" styleClass="player-turn" text="Player 1 Score:">
                <font>
                   <Font name="System Bold" size="21.0" />
                </font>
