@@ -1,0 +1,27 @@
+/* TODO */
+/* Colors and font sizes used:
+ * aliceblue
+ * cornflowerblue
+ * 16pt
+ * 18pt
+ * */
+.root{
+	-fx-font-size: 16pt;
+	-fx-background-color: aliceblue;
+}
+
+.label{
+	-fx-font-size: 18pt;
+	-fx-font-weight: bold;
+}
+
+/* The selector below will style a ComboBox including its inner items */
+.combo-box, .combo-box .list-cell{
+	-fx-background-color: cornflowerblue;
+}
+
+.combo-box, .button{
+	-fx-background-color: cornflowerblue;
+	-fx-border-radius: 25;
+	-fx-background-radius: 25;
+}

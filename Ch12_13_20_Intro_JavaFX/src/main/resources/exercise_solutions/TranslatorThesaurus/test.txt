@@ -1,0 +1,4 @@
+Original message:
+Hello
+Translated message:
+Hola

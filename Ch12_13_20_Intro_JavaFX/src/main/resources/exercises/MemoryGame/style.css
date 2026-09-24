@@ -1,0 +1,15 @@
+.button {
+    -fx-font-size: 32;
+    -fx-text-alignment: CENTER;
+    -fx-background-color: lightblue;
+    -fx-text-fill: rgb(29, 88, 90);
+}
+
+.label {
+    -fx-text-fill: rgb(41, 126, 157);
+}
+
+.player-turn {
+    -fx-border-color: rgb(228, 168, 223);
+    -fx-border-width: 2;
+}
