@@ -138,10 +138,7 @@ public class MemoryGame_Solution {
                 System.out.println("Invalid input. Please enter two valid numbers with a space between.");
                 continue;
             }
-            if (revealed[row][col]) {
-                System.out.println("That space is already revealed. Try another.");
-                continue;
-            }
+            
             return new int[]{row, col};
 
         }

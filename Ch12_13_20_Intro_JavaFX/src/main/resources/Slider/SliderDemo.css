@@ -1,0 +1,13 @@
+.root{
+	-fx-background-color: rgb(100, 200, 255);
+	-fx-font-size: 14pt;
+}
+
+.slider {
+	-fx-padding: 40px 20px 40px 0px;
+}
+
+/* Style the slider tick labels */
+.slider .axis {
+	-fx-tick-label-fill: white;
+}

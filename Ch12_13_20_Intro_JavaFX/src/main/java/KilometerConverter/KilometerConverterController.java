@@ -2,6 +2,7 @@ package KilometerConverter;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -14,12 +15,16 @@ public class KilometerConverterController {
     private Label resultL;
 
     @FXML
-    void convert(ActionEvent event) {
-        //1.609 km / m
-        double km = Double.parseDouble(kmT.getText());
-        double miles = km / 1.609;
-        String result = String.format("%.2f km is equivalent to %.2f miles", km, miles);
-        resultL.setText(result);
+    private Button convertBtn;
+
+    public void initialize() {
+        convertBtn.setOnAction(event -> {
+            // 1.609 km / m
+            double km = Double.parseDouble(kmT.getText());
+            double miles = km / 1.609;
+            String result = String.format("%.2f km is equivalent to %.2f miles", km, miles);
+            resultL.setText(result);
+        });
     }
 
 }

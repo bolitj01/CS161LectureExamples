@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@Menu_FileChooserDemo.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Menu_FileChooser.Menu_FileChooserDemoController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem onAction="#readFile" text="Open" />
+                  <MenuItem onAction="#save" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveAs" text="Save As..." />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Format">
+               <items>
+                  <RadioMenuItem fx:id="smallRMI" mnemonicParsing="false" onAction="#changeFont" text="Small">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="fontsize" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+                  <RadioMenuItem fx:id="mediumRMI" mnemonicParsing="false" onAction="#changeFont" text="Medium" toggleGroup="$fontsize" />
+                  <RadioMenuItem fx:id="largeRMI" mnemonicParsing="false" onAction="#changeFont" text="Large" toggleGroup="$fontsize" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TextArea fx:id="fileText" prefHeight="200.0" prefWidth="200.0" promptText="Upload a text file!" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<HBox alignment="CENTER" prefHeight="295.0" prefWidth="466.0" spacing="10.0" stylesheets="@ComboBoxDemo.fx.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ComboBox.ComboBoxDemoController">
+   <children>
+      <ComboBox fx:id="sizeCB" editable="true" onAction="#resizeImage" prefWidth="150.0" promptText="Image Size" />
+      <StackPane fx:id="imgPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="280.0">
+         <children>
+            <ImageView fx:id="dogIV" fitHeight="223.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ListView/Schnoodle.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+   </children>
+</HBox>

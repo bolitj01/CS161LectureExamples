@@ -1,0 +1,16 @@
+.root{
+	-fx-text-fill: blue;
+	-fx-font-size: 14pt;
+}
+
+.small {
+	-fx-font-size: 10pt;
+}
+
+.medium {
+	-fx-font-size: 14pt;
+}
+
+.large {
+	-fx-font-size: 20pt;
+}

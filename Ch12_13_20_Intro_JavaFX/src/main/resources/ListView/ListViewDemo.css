@@ -1,0 +1,14 @@
+.root {
+	-fx-font-size: 12pt;
+	-fx-font-family: 'Brush Script MT';
+}
+
+.hbox{
+	-fx-pref-width:500px;
+	-fx-pref-height:300px;
+}
+
+.list-view {
+	-fx-pref-width: 250px;
+	-fx-pref-height: 300px;
+}

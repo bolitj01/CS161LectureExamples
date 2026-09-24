@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<HBox alignment="CENTER" prefHeight="295.0" prefWidth="466.0" spacing="10.0" style="-fx-pref-width: 500; -fx-pref-height: 300; -fx-border-color: black;" stylesheets="@SliderDemo.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Slider.SliderDemoController">
+   <children>
+      <Slider fx:id="sizeSlider" blockIncrement="25.0" majorTickUnit="100.0" max="801.0" min="100.0" minorTickCount="10" orientation="VERTICAL" showTickLabels="true" snapToTicks="true" value="200.0">
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </Slider>
+      <Separator orientation="VERTICAL" prefHeight="200.0" />
+      <StackPane fx:id="imgPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="280.0">
+         <children>
+            <ImageView fx:id="dogIV" fitHeight="223.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ListView/Schnoodle.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+   </children>
+</HBox>

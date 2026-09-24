@@ -1,0 +1,39 @@
+#label-error {
+	-fx-background-color: red;
+	-fx-text-fill: white;
+}
+
+.root{
+	-fx-background-color: rgb(100, 200, 255);
+	-fx-font-size: 14pt;
+}
+
+.hbox{
+	-fx-pref-width: 500px;
+	-fx-pref-height: 300px;
+	-fx-border-color: black;
+}
+
+.combo-box{
+	-fx-pref-width:180px;
+}
+
+.small {
+	-fx-pref-width:100px;
+	-fx-pref-height:100px;
+}
+
+.medium{
+	-fx-pref-width:200px;
+	-fx-pref-height:200px;
+}
+
+.large {
+	-fx-pref-width:300px;
+	-fx-pref-height:300px;
+}
+
+.ultra {
+	-fx-pref-width:500px;
+	-fx-pref-height:500px;
+}
