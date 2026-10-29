@@ -10,6 +10,7 @@
         <module>Ch6_Classes_Objects_I</module>
         <module>Ch8_Classes_Objects_II</module>
         <module>Ch10_Inheritance</module>
+        <module>Ch11_Exceptions_Binary_Files</module>
         <module>Ch12_13_20_Intro_JavaFX</module>
     </modules>
 
