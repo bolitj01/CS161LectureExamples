@@ -12,6 +12,7 @@
         <module>Ch10_Inheritance</module>
         <module>Ch11_Exceptions_Binary_Files</module>
         <module>Ch12_13_20_Intro_JavaFX</module>
+        <module>Generics</module>
     </modules>
 
     <properties>
