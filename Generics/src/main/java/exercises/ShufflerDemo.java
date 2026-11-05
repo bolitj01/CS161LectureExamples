@@ -2,14 +2,14 @@ package exercises;
 
 public class ShufflerDemo {
     public static void main(String[] args) {
-        Shuffler<String> shuffler = new Shuffler<String>();
-        shuffler.addElement("apple");
-        shuffler.addElement("banana");
-        shuffler.addElement("cherry");
-        shuffler.addElement("date");
+        Shuffler_Solution<String> shuffler = new Shuffler_Solution<>();
+        shuffler.addItem("apple");
+        shuffler.addItem("banana");
+        shuffler.addItem("cherry");
+        shuffler.addItem("date");
 
         System.out.println("Original items: " + shuffler);
-        System.out.println("Removed banana: " + shuffler.removeElement("banana"));
+        System.out.println("Removed banana: " + shuffler.removeItem("banana"));
         System.out.println("Before shuffle: " + shuffler);
 
         shuffler.shuffle();
